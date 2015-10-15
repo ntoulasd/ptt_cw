@@ -4,6 +4,7 @@ Python serial port RTS (DTR) ptt and cw (Radio Hams)<br>
 Python program to sent to serial port rts signals for PTT and dit dah cw code.
 
 INSTALL (Import readchar)<br>
+  sudo apt-get install python-pip<br>
   sudo pip install readchar<br>
 
 RUN<br>
