@@ -8,6 +8,7 @@ INSTALL (Import readchar)<br>
   sudo pip install readchar<br>
 
 RUN<br>
+Make file executable<br>
 ./cw.py<br>
 
 
