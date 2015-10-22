@@ -10,7 +10,7 @@ ser.open()
 ser.setRTS(1) # or ser.setDTR(0)
 
 if __name__ == '__main__':
-        dot = (50.0 / 1000.0) #Dot time
+        dot = (100.0 / 1000.0) #Dot time
         while 1:
                 c = readchar.readkey()
                 if c == 'q':     ## Exit
