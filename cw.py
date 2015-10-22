@@ -20,13 +20,13 @@ if __name__ == '__main__':
                         ser.setRTS(0)
                         time.sleep (dot)
                         ser.setRTS(1)
-                        time.sleep (dot)
+                        time.sleep (dot/2)
                 if c =='/':
                         print "_ ";
                         ser.setRTS(0)
                         time.sleep (3*dot)
                         ser.setRTS(1)
-                        time.sleep (dot)
+                        time.sleep (dot/2)
                 if c =='z':
                         print "PTT ON"
                         ser.setRTS(0)
