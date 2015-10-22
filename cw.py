@@ -12,6 +12,7 @@ dottime = (100.0 / 1000.0) #Dot time
 freq=500 #500 Hertz tone
 
 def dot():
+	print ".",
 	ser.setRTS(1)
         #time.sleep (dottime)
 	os.system('play --no-show-progress --null --channels 1 synth %s sine %f' % ( dottime, freq ))
@@ -19,6 +20,7 @@ def dot():
         time.sleep (dottime/2)
 
 def dat():
+	print "_",
         ser.setRTS(1)
         #time.sleep (3*dottime)
 	os.system('play --no-show-progress --null --channels 1 synth %s sine %f' % ( 3*dottime, freq ))
@@ -32,100 +34,98 @@ if __name__ == '__main__':
 		if c == 'Q':     ## Exit
                         break
                 if c =='.':
-                        print ". ";
                         dot()
                 if c =='/':
-                        print "_ ";
 			dat()
 
                 if c =='a':
-                        print "a ";
+                        print "a ",
 			dot(); dat();
                 if c =='b':
-                        print "b ";
+                        print "b ",
 			dat(); dot(); dot(); dot();
                 if c =='c':
-                        print "c ";
+                        print "c ",
 			dot(); dat(); dot(); dat();
                 if c =='d':
-                        print "d ";
+                        print "d ",
 			dat(); dot(); dot();
                 if c =='e':
-                        print "e ";
+                        print "e ",
 			dot();
                 if c =='f':
-                        print "f ";
+                        print "f ",
 			dot(); dot(); dat(); dot();
                 if c =='g':
-                        print "g ";
+                        print "g ",
 			dat(); dat(); dot();
                 if c =='h':
-                        print "h ";
+                        print "h ",
 			dot(); dot(); dot(); dot();
                 if c =='i':
-                        print "i ";
+                        print "i ",
 			dot(); dot(); 
                 if c =='j':
-                        print "j ";
+                        print "j ",
 			dot(); dat(); dat(); dat(); 
                 if c =='k':
-                        print "k ";
+                        print "k ",
 			dat(); dot(); dat();
                 if c =='l':
-                        print "l ";
+                        print "l ",
 			dot(); dat(); dot(); dot();  
                 if c =='m':
-                        print "m ";
+                        print "m ",
 			dat(); dat(); 
                 if c =='n':
-                        print "n ";
+                        print "n ",
 			dat(); dot(); 
                 if c =='o':
-                        print "o ";
+                        print "o ",
 			dat(); dat(); dat();
                 if c =='p':
-                        print "p ";
+                        print "p ",
 			dot(); dat(); dat(); dot(); 
                 if c =='q':
-                        print "q ";
+                        print "q ",
 			dat(); dat(); dot(); dat(); 
                 if c =='r':
-                        print "r ";
+                        print "r ",
 			dot(); dat(); dot();
                 if c =='s':
-                        print "s ";
+                        print "s ",
 			dot(); dot(); dot();
                 if c =='t':
-                        print "t ";
+                        print "t ",
 			dat(); 
                 if c =='u':
-                        print "u ";
+                        print "u ",
 			dot(); dot(); dat(); 
                 if c =='v':
-                        print "v ";
+                        print "v ",
 			dot(); dot(); dot(); dat(); 
                 if c =='w':
-                        print "w ";
+                        print "w ",
 			dot(); dat(); dat(); 
                 if c =='x':
-                        print "x ";
+                        print "x ",
 			dat(); dot(); dot(); dat(); 
                 if c =='y':
-                        print "y ";
+                        print "y ",
 			dat(); dot(); dat(); dat(); 
                 if c =='z':
-                        print "z ";
+                        print "z ",
 			dat(); dat(); dot(); dot(); 
 
                 if c >= '0' and c < '6' :
-			print c;
+			print c,
                         for x in range(0, int(c)):
 				dot(); 
 			for x in range(1, 6-int(c)):
 				dat();  
 
                 if c > '5' and c <= '9' :
-			print c;
+			print c,
                         for x in range(0, int(c)-5):
 				dat(); 
 			for x in range(0, 10-int(c)):
@@ -139,6 +139,8 @@ if __name__ == '__main__':
                 if c =='X':
                         print "PTT OFF"
                         ser.setRTS(0)
+
+		print "";
 
 
 
